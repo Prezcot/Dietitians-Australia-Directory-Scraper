@@ -27,8 +27,8 @@ A web scraping tool designed to extract practitioner information from the Dietit
 1. Clone this repository:
 
 ```bash
-git clone [your-repository-url]
-cd [repository-name]
+git clone https://github.com/Prezcot/Dietitians-Australia-Directory-Scraper.git
+cd Dietitians-Australia-Directory-Scraper
 ```
 
 2. Install required Python packages:
