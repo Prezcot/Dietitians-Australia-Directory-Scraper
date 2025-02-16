@@ -185,7 +185,7 @@ def start_scraping(suburbs):
 def main():
 
     # Add new suburbs as needed
-    suburbs = ["Sydney"]
+    suburbs = ["Sydney", "Melbourne"]
 
     try:
         # Setup the driver with firefox
