@@ -12,6 +12,7 @@ A web scraping tool designed to extract practitioner information from the Dietit
   - Suburb
   - Website
   - Languages
+  - Location
 - Handles pagination automatically
 - Exports data to CSV files organized by suburb
 - Includes timestamp in filenames for version control

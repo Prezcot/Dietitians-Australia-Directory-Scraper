@@ -75,6 +75,18 @@ def grab_data():
                 speciality_div = card.find_element(By.CLASS_NAME, "speciality")
                 info_paragraphs = speciality_div.find_elements(By.TAG_NAME, "p")
 
+                # Get location from map marker - modified selector
+                try:
+                    map_marker = card.find_element(
+                        By.CSS_SELECTOR, "a[onclick*='callOpenGoogleMap']"
+                    )
+                    location = map_marker.get_attribute("title")
+                    practitioner["Location"] = location
+                    print(f"Found location: {location}")  # Debug print
+                except Exception as e:
+                    print(f"Failed to get location: {e}")  # Debug print
+                    practitioner["Location"] = "N/A"
+
                 for p in info_paragraphs:
                     text = p.text
                     if "Business Name:" in text:
@@ -159,6 +171,7 @@ def start_scraping(suburbs):
                 "Suburb",
                 "Website",
                 "Languages",
+                "Location",
             ]
             with open(filename, "w", newline="", encoding="utf-8") as csvfile:
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -172,7 +185,7 @@ def start_scraping(suburbs):
 def main():
 
     # Add new suburbs as needed
-    suburbs = ["Sydney", "Melbourne"]
+    suburbs = ["Sydney"]
 
     try:
         # Setup the driver with firefox
