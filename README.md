@@ -88,14 +88,6 @@ The scraper:
 - Subject to website's terms of service
 - Rate limited by built-in delays to prevent server overload
 
-## Contributing
-
-Feel free to fork this repository and submit pull requests for any improvements.
-
-## License
-
-[Your chosen license]
-
 ## Disclaimer
 
 This tool is for educational purposes only. Please ensure you comply with Dietitians Australia's terms of service and data usage policies when using this scraper.
